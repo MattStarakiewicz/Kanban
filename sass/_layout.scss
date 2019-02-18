@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+
+}
+
+a, p, h1, h2, h3, h4, h5, h6, button {
+    font-family: $main-font;
+    color: $primary-font-color;
+};
+
+
+h1 {
+    font-size: 1.5em;
+    margin: 0.4em 0;
+    color: $h1-color;
+    text-transform: capitalize;
+}
+
+h2 {
+    font-size: 1em;
+    margin: 0.4em 0;
+    color: $h2-color;
+}
+
+a, p, button {
+    font-size: 0.8em;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.create-column {
+    cursor: pointer;
+    background-color: #1B8928;
+    color: #fff;
+    border: 3px solid #177522;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px -1px rgba(0,0,0,0.54);
+    padding: 8px;
+    width: 150px;
+    transition-duration: 0.5s;
+    &:hover {
+        background-color: #24B635;
+    }
+};
+
+.btn-delete {
+    color: #bababa;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    font-size: 10px;
+    background-color: #f6f7f6;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px -1px rgba(0,0,0,0.54);
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    z-index: 101;
+    transition-duration: 0.5s;
+    &:after {
+        content: '✖';
+        margin: 0 auto;
+
+    }
+    &:hover {
+        background-color: #a3a3a3;
+        color: #fff;
+    };
+}
+
+.add-card {
+    background-color: #0188cc;
+    color: #fff;
+    border: 3px solid #016AA1;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px -1px rgba(0,0,0,0.54);
+    padding: 8px;
+    cursor: pointer;
+    width: 100px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    transition-duration: 0.5s;
+    &:hover {
+        background-color: #019CEC;
+    }
+}
+
+body {
+    background-color: $body-color;
+    margin: 0;
+    padding: 0;
+}
+
+.board {
+    background-color: $board-color;
+    height: auto;
+    width: auto;
+    padding: 30px 30px;
+    margin: 30px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px -1px rgba(0,0,0,0.54);
+    border: 4px solid #5B8510;
+    .column-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .column {
+            position: relative;
+            width: auto;
+            background-color: $column-color;
+            margin: 20px 20px 20px 0;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px -1px rgba(0,0,0,0.54);
+            border: 4px solid #5B8510;
+            .column-card-list {
+                min-width: 200px;
+                min-height: 150px;
+                .card {
+                cursor: pointer;
+                position: relative;
+                background-color: $card-color;
+                min-width: 200px;
+                max-width: 400px;
+                min-height: 30px;
+                border-radius: 5px;
+                box-shadow: 2px 2px 5px -1px rgba(0,0,0,0.54);
+                border: 4px solid #5B8510;
+                padding: 25px 5px 5px 5px;
+                margin: 10px 0;
+                }
+            };
+        }
+    }
+}
